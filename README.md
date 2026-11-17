@@ -4,6 +4,9 @@ An educational, in-memory implementation of PostgreSQL's **Multi-Version Concurr
 
 This project demonstrates how relational databases like PostgreSQL manage concurrent transactions without locking readers, implementing tuple versioning (`xmin` / `xmax`), database snapshots, transaction isolation levels, and write-conflict detection.
 
+> [!NOTE]
+> **Reference Video**: For a detailed conceptual walkthrough of how PostgreSQL implements MVCC and isolation levels, see this [YouTube Video](https://youtu.be/JV8m1ZvlBcM?si=9MKmmSDO_KJI3Kkt).
+
 ---
 
 ## Features
@@ -158,3 +161,9 @@ This project is a teaching and exploration vehicle. Potential extensions include
 - **Aborted Transaction Rollback**: Explicit reclamation or skipping of aborted tuples.
 - **Thread Safety**: Adding sync primitives (`sync.RWMutex`) to support concurrent goroutines.
 - **Serializable Isolation**: Implementing SSI (Serializable Snapshot Isolation) with read/write dependency tracking (`siREAD` locks).
+
+---
+
+## References
+
+- [YouTube: PostgreSQL MVCC & Transaction Isolation Walkthrough](https://youtu.be/JV8m1ZvlBcM?si=9MKmmSDO_KJI3Kkt)
